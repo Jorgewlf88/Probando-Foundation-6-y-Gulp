@@ -67,6 +67,7 @@ gulp.task('serve', ['sass', 'stylus', 'scripts', 'concat-css'], function() {
   gulp.watch('js/*.js', ['lint', 'scripts']);
   gulp.watch('scss/*.scss', ['sass']);
   gulp.watch('styl/*.styl', ['stylus']);
+  gulp.watch('css/**/*.css', ['concat-css']);
   gulp.watch("*.html").on('change', browserSync.reload);
 });
 
