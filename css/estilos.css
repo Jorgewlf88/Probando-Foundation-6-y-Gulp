@@ -1,0 +1,15 @@
+.color1 {
+  background: #00ff7f;
+}
+.color1 p {
+  color: #639;
+}
+.color1 p:nth-child(2) {
+  color: #f00;
+}
+.reee {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
