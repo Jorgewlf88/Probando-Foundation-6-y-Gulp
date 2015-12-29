@@ -9,7 +9,15 @@
   "author": "Jorge Ortega",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.0"
+    "browser-sync": "^2.10.1",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1",
+    "gulp-stylus": "^2.1.2",
+    "gulp-uglify": "^1.5.1",
+    "jshint": "^2.8.0"
   },
   "repository": {
     "type": "git",
