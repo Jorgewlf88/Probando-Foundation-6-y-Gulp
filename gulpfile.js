@@ -2,6 +2,7 @@
 var gulp = require('gulp');
 
 // Incluir plugins
+var bower = require('gulp-bower');
 var jshint = require('gulp-jshint');
 var sass = require('gulp-sass');
 var stylus = require('gulp-stylus');
@@ -11,6 +12,23 @@ var rename = require('gulp-rename');
 var autoprefixer = require('autoprefixer-stylus');
 var nano = require('gulp-cssnano');
 var browserSync = require('browser-sync').create();
+
+// Directiorio bower
+var config = {
+  bowerDir: './bower_components'
+}
+
+// Corre bower
+gulp.task('bower', function() {
+  return bower()
+    .pipe(gulp.dest(config.bowerDir))
+});
+
+// fontawesome
+gulp.task('icons', function() {
+  return gulp.src(config.bowerDir + '/font-awesome/fonts/**.*')
+    .pipe(gulp.dest('css/fonts'));
+});
 
 // Lint Task
 gulp.task('lint', function() {
@@ -82,4 +100,4 @@ gulp.task('serve', ['sass', 'stylus', 'scripts', 'concat-css'], function() {
 
 
 // Default Task
-gulp.task('default', ['serve', 'lint']);
+gulp.task('default', ['serve', 'bower', 'icons', 'lint']);
