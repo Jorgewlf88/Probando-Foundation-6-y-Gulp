@@ -101,3 +101,4 @@ gulp.task('serve', ['sass', 'stylus', 'scripts', 'concat-css'], function() {
 
 // Default Task
 gulp.task('default', ['serve', 'bower', 'icons', 'lint']);
+
